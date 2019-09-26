@@ -136,7 +136,7 @@ class Operations extends DB
         return ($query) ? TRUE : FALSE;
     }
 }
-$obj = new Operations;
+$obj = new OP;
 echo "<pre>";
 $myArray = array(
     'name' => 'Name',
