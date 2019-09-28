@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello world</h1>
-    <h2>Hello world</h2>
-</body>
-</html> 
+<?php
+// CODE TO CREATE DB
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Creating a connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+// Creating a database named newDB
+$sql = "CREATE DATABASE rb_test";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully with the name newDB";
+} else {
+    echo $conn->error;
+}
+// closing connection
+$conn->close();

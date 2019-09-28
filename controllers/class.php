@@ -136,16 +136,3 @@ class Operations extends DB
         return ($query) ? TRUE : FALSE;
     }
 }
-$obj = new OP;
-echo "<pre>";
-$myArray = array(
-    'name' => 'Name',
-    'email' => 'saad@gmail.com',
-    'password' => '1234567',
-    'userid' => rand(),
-);
-
-// print_r($myArray);
-// echo $obj->update('user', '6', $myArray);
-// echo $obj->SelectByID('user', '6');
-print_r($obj->SelectAll('user'));
