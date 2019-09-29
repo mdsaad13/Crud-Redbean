@@ -7,23 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <title>Create Data base</title>
 </head>
-<style>
-    .main {
-        max-width: 600px;
-        margin-top: 100px;
-        background: #E9ECEF;
-        padding: 25px 30px;
-        border-radius: 20px;
-    }
-</style>
 
 <body>
     <div class="container main">
-        <h2 style="text-align:center">Generate config.php file</h2>
+        <h1>Generate config.php file</h1>
         <br>
         <form method="post" action="create_db.php">
             <div class="form-group">
@@ -32,7 +24,7 @@
                 <small class="form-text text-muted">If you've already created database, please specify the name</small>
             </div>
 
-            <div class="form-group" style="text-align: center;">
+            <div class="center">
                 <button type="submit" class="btn btn-primary">Create database</button>
             </div>
         </form>
