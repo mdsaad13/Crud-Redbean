@@ -4,8 +4,9 @@ require_once 'controllers/class.php';
 $obj = new Operations;
 if ($_POST) {
     if (isset($_POST['create'])) {
-        extract($_POST);
-        $id = $obj->insert('users', array('name' => $name, 'email' => $email, 'password' => $password,));
+        //Poping out the element $_POST['create'] from $_POST, To make sure that does not create a seperate field in table
+        array_pop($_POST);
+        $id = $obj->insert('users', $_POST);
         header("location:details.php?$id");
     }
     if (isset($_POST['login'])) {

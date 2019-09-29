@@ -1,7 +1,5 @@
 <?php
 
-// namespace OP;
-
 /**
  * Database connection 
  * @Author: Mohammed Saad

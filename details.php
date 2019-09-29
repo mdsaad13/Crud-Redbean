@@ -33,6 +33,8 @@ $FetchDetails = $obj->SelectAll('users');
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +44,10 @@ $FetchDetails = $obj->SelectAll('users');
                         <td><?= $FetchDetails['name'] ?></td>
                         <td><?= $FetchDetails['email'] ?></td>
                         <td><?= $FetchDetails['password'] ?></td>
+                        <td><a href="update.php" class="btn btn-info">Edit</a></td>
+                        <td><a href="create_acc.php" class="btn btn-danger">Delete</a></td>
+
+
                     </tr>
                 <?php } ?>
             </tbody>
