@@ -12,6 +12,7 @@
 
 require_once('rb.php');
 require_once('config.php');
+require_once('sessions.php');
 
 // use DB as DB;
 

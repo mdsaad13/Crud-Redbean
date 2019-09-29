@@ -16,7 +16,8 @@ if ($_POST) {
             $userDetails = $obj->SelectByArgs('users', array('email' => $email));
             if ($userDetails[0]['password'] == $password) {
                 // echo "Email and Password";
-                header("location:login.php?status=1");
+                Session::SetSession('id', $userDetails[0]['id']);
+                header("location:user.php");
             } else {
                 // echo "Incorrect Password";
                 header("location:login.php?status=2");
