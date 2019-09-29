@@ -12,7 +12,7 @@ abstract class DB
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $DBName = "rb_test";
+    private $DBName = "YOUR_DB_NAME";
 
     protected function DB_Connect(bool $flag)
     {
