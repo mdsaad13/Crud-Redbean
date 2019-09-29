@@ -52,6 +52,8 @@
       </div>
       <div class="form-group">
         <a href="create_acc.php">Create Account</a>
+        <br>
+        <a href="details.php">View users</a>
       </div>
     </form>
   </div>

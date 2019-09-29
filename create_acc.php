@@ -34,6 +34,8 @@
       </div>
       <div class="form-group">
         <a href="login.php">Login</a>
+        <br>
+        <a href="details.php">View users</a>
       </div>
     </form>
   </div>
