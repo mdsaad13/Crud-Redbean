@@ -16,7 +16,7 @@
 <body>
   <div class="container main">
     <h1>Create account</h1>
-    <form class="" action="controllers/createacc_control.php" method="post">
+    <form action="create_login_controller.php" method="post">
       <div class="form-group">
         <label for="exampleDropdownFormname1">Name</label>
         <input type="text" class="form-control" id="exampleDropdownFormname" placeholder="Name" name="name">
@@ -30,7 +30,10 @@
         <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" name="password">
       </div>
       <div class="center">
-        <button type="submit" class="btn btn-primary">Create account</button>
+        <button type="submit" class="btn btn-primary" name="create">Create account</button>
+      </div>
+      <div class="form-group">
+        <a href="login.php">Login</a>
       </div>
     </form>
   </div>

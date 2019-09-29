@@ -1,6 +1,6 @@
 <?php
 
-namespace OP;
+// namespace OP;
 
 /**
  * Database connection 
@@ -13,21 +13,28 @@ namespace OP;
 require_once('rb.php');
 require_once('config.php');
 
+// use DB as DB;
+
 class Operations extends DB
 {
+    /**
+     * Connecting to Database
+     */
+    public function __construct()
+    {
+        $this->DB_Connect(true);
+    }
     /**
      * @param tablename,array of table fields to be inserted
      * @return id of inserted data else @return false
      */
     public function insert($table, $fields)
     {
-        $this->DB_Connect(true);
         $insertData = R::dispense($table);
         foreach ($fields as $key => $value) {
             $insertData->$key = $value;
         }
         $id = R::store($insertData);
-        $this->DB_Connect(false);
         if ($id) {
             return $id;
         } else {
@@ -42,7 +49,6 @@ class Operations extends DB
      */
     public function update($table, $id, $fields)
     {
-        $this->DB_Connect(true);
         $updateData = R::load($table, $id);
         if ($updateData['id'] != 0) {
             foreach ($fields as $key => $value) {
@@ -61,7 +67,6 @@ class Operations extends DB
      */
     public function delete($table, $id)
     {
-        $this->DB_Connect(true);
         $deleteData = R::load($table, $id);
         if ($deleteData['id'] != 0) {
             R::trash($deleteData);
@@ -76,7 +81,6 @@ class Operations extends DB
      */
     public function SelectByID($table, $id)
     {
-        $this->DB_Connect(true);
         $return = R::load($table, $id);
         if ($return['id'] != 0) {
             return $return;
@@ -91,7 +95,6 @@ class Operations extends DB
      */
     public function SelectAll($table)
     {
-        $this->DB_Connect(true);
         return R::findAll($table);
     }
 
@@ -102,7 +105,6 @@ class Operations extends DB
      */
     public function SelectByArgs($table, $args)
     {
-        $this->DB_Connect(true);
         $sql = "";
         $condition = "";
         foreach ($args as $key => $value) {

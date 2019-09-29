@@ -7,40 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-  <title>Hello, world!</title>
+  <title>Login</title>
 </head>
-<style>
-  .main {
-    max-width: 600px;
-    margin-top: 100px;
-    background: #E9ECEF;
-    padding: 25px 30px;
-    border-radius: 20px;
-  }
-</style>
 
 <body>
   <div class="container main">
-    <!-- <div class="jumbotron"> -->
-    <h1 style="text-align:center">Login</h1>
-    <form>
+    <?php
+    if (isset($_REQUEST['status'])) {
+      if ($_REQUEST['status'] == 1) { ?>
+        <div class="alert alert-success" role="alert">
+          Login Success!
+        </div>
+      <?php
+        } else if ($_REQUEST['status'] == 2) { ?>
+        <div class="alert alert-danger" role="alert">
+          Invalid Credentials!
+        </div>
+      <?php
+        } else if ($_REQUEST['status'] == 3) { ?>
+        <div class="alert alert-warning" role="alert">
+          Email does not exists!
+        </div>
+    <?php
+      }
+    }
+
+    ?>
+
+    <h1>Login</h1>
+    <form action="create_login_controller.php" method="post">
       <div class="form-group">
-        <label for="exampleInputEmail1">User name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter user name">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email" required>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" name="password" required>
       </div>
-      <div class="form-group" style="text-align: center;">
-        <button type="submit" class="btn btn-primary">Login</button>
+      <div class="center">
+        <button type="submit" class="btn btn-primary" name="login">Login</button>
+      </div>
+      <div class="form-group">
+        <a href="create_acc.php">Create Account</a>
       </div>
     </form>
-    <!-- </div> -->
-
-
   </div>
 </body>
 
