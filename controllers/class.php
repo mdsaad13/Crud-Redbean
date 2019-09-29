@@ -137,4 +137,9 @@ class Operations extends DB
         $query  = R::getAll($sql);
         return ($query) ? TRUE : FALSE;
     }
+
+    public function __destruct()
+    {
+        $this->DB_Connect(false);
+    }
 }
