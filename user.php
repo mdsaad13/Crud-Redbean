@@ -30,7 +30,7 @@ $obj = new Operations;
             <p>Hello <b><?= $FetchDetails['name'] ?>,</b></p>
             <p><b>Your Session is started</b></p>
             <p>This page also shows how to fetch single user from database</p>
-            <p>To test kindly <a href="logout.php">Logout</a></p>
+            <p>To test session kindly <a href="logout.php">Logout</a></p>
 
         <?php } else { ?>
             <p>Session does not Exists, Kindly Login to demonstrate this page</p>
