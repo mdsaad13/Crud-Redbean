@@ -53,3 +53,7 @@ h5 a {
     font-size: inherit !important;
     margin: inherit !important;
 }
+
+.card {
+    margin-bottom: 10px;
+}

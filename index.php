@@ -13,7 +13,7 @@
     <title>Documentation</title>
 </head>
 
-<body style="background:#F7F7F7">
+<body style="background:#F7F7F7;padding: 25px 0;">
     <div class="container">
         <h1 class="center">How to view the examples!</h1>
         <div class="card">
@@ -55,7 +55,7 @@
                 <a href="login.php" class="btn btn-link" target="_blank">Login</a>
             </div>
         </div>
-        <div style="padding: 15px;">
+        <div style="padding: 5px;">
             <h5>To learn how to implement these functions in your project, <a href="#" class="btn btn-link">Click here</a></h5>
         </div>
 
