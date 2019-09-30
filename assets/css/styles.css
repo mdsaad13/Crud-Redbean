@@ -25,3 +25,31 @@ body {
 .center button {
     width: 50%;
 }
+
+.center {
+    text-align: center;
+}
+
+.heading {
+    font-size: 18px;
+}
+
+.summary {
+    font-size: 15px;
+    color: #515151;
+}
+
+.note {
+    font-size: 16px;
+    color: #8b8989;
+}
+
+.card .btn {
+    padding: unset;
+}
+
+h5 a {
+    padding: inherit !important;
+    font-size: inherit !important;
+    margin: inherit !important;
+}
