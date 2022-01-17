@@ -2,10 +2,6 @@
 
 /**
  * Database connection 
- * @Author: Mohammed Saad
-=====================================
-   PROPERTY OF MOHAMMED SAAD
- * instagram = https://www.instagram.com/mohammed.__.saad/
  */
 
 require_once('rb.php');
